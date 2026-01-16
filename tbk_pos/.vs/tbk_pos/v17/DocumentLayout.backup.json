@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Insico\\tbk_pos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\controllers\\tbkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:controllers\\tbkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\repository\\dbtbk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\repository\\dbtbk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\controllers\\deudacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:controllers\\deudacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\helpers\\printerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\helpers\\printerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\proxies\\firmaicert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\proxies\\firmaicert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\dto\\keyresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\dto\\keyresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\dto\\initfoliosresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\dto\\initfoliosresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\dto\\firmadocumentorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\dto\\firmadocumentorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\dto\\clientmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\dto\\clientmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\infractructure\\config\\connectionstringsconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:infractructure\\config\\connectionstringsconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|c:\\insico\\tbk_pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EDD1A73-1A92-4B6B-A30D-5B863B7890D9}|tbk_pos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbTbk.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\repository\\dbTbk.cs",
+              "RelativeDocumentMoniker": "infractructure\\repository\\dbTbk.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\repository\\dbTbk.cs",
+              "RelativeToolTip": "infractructure\\repository\\dbTbk.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAMwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T14:25:09.379Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FirmaIcert.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\proxies\\FirmaIcert.cs",
+              "RelativeDocumentMoniker": "infractructure\\proxies\\FirmaIcert.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\proxies\\FirmaIcert.cs",
+              "RelativeToolTip": "infractructure\\proxies\\FirmaIcert.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAcwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:15:30.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrinterHelper.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\helpers\\PrinterHelper.cs",
+              "RelativeDocumentMoniker": "infractructure\\helpers\\PrinterHelper.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\helpers\\PrinterHelper.cs",
+              "RelativeToolTip": "infractructure\\helpers\\PrinterHelper.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwA4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:15:26.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClientMessageDto.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\dto\\ClientMessageDto.cs",
+              "RelativeDocumentMoniker": "infractructure\\dto\\ClientMessageDto.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\dto\\ClientMessageDto.cs",
+              "RelativeToolTip": "infractructure\\dto\\ClientMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:23:54.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TbkController.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\Controllers\\TbkController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TbkController.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\Controllers\\TbkController.cs",
+              "RelativeToolTip": "Controllers\\TbkController.cs",
+              "ViewState": "AgIAAP4BAAAAAAAAAAAQwAsCAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T19:29:53.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeudaController.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\Controllers\\DeudaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DeudaController.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\Controllers\\DeudaController.cs",
+              "RelativeToolTip": "Controllers\\DeudaController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAMwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:13:34.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FirmaDocumentoRequest.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\dto\\FirmaDocumentoRequest.cs",
+              "RelativeDocumentMoniker": "infractructure\\dto\\FirmaDocumentoRequest.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\dto\\FirmaDocumentoRequest.cs",
+              "RelativeToolTip": "infractructure\\dto\\FirmaDocumentoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:23:55.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InitFoliosResponseDto.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\dto\\InitFoliosResponseDto.cs",
+              "RelativeDocumentMoniker": "infractructure\\dto\\InitFoliosResponseDto.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\dto\\InitFoliosResponseDto.cs",
+              "RelativeToolTip": "infractructure\\dto\\InitFoliosResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:23:55.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KeyResponseDto.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\dto\\KeyResponseDto.cs",
+              "RelativeDocumentMoniker": "infractructure\\dto\\KeyResponseDto.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\dto\\KeyResponseDto.cs",
+              "RelativeToolTip": "infractructure\\dto\\KeyResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:23:56.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConnectionStringsConfig.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\infractructure\\config\\ConnectionStringsConfig.cs",
+              "RelativeDocumentMoniker": "infractructure\\config\\ConnectionStringsConfig.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\infractructure\\config\\ConnectionStringsConfig.cs",
+              "RelativeToolTip": "infractructure\\config\\ConnectionStringsConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T16:15:45.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Insico\\tbk_pos\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-27T12:31:00.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Insico\\tbk_pos\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-27T13:41:07.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Insico\\tbk_pos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Insico\\tbk_pos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T13:20:59.168Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

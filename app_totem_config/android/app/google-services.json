@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "471978505888",
+    "project_id": "config-totems",
+    "storage_bucket": "config-totems.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471978505888:android:1c29279c82c1b826863bc5",
+        "android_client_info": {
+          "package_name": "com.example.app_totem_config"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXC2iwGNJ9GIoGlD35IL6NEFHdHFZj21Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

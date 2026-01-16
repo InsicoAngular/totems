@@ -1,0 +1,71 @@
+20-12-2024 10:39:52: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:39:52: Documento cargado con 1 páginas.
+20-12-2024 10:40:03: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:40:03: Documento cargado con 1 páginas.
+20-12-2024 10:41:24: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:41:24: Documento cargado con 1 páginas.
+20-12-2024 10:44:26: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:44:26: Documento cargado con 1 páginas.
+20-12-2024 10:49:16: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:49:16: Documento cargado con 1 páginas.
+20-12-2024 10:49:46: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:49:53: Documento cargado con 1 páginas.
+20-12-2024 10:53:52: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:53:52: Impresión enviada correctamente.
+20-12-2024 10:59:05: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 10:59:14: Impresión enviada correctamente.
+20-12-2024 11:05:35: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 11:05:36: Documento cargado con 1 páginas.
+20-12-2024 11:05:42: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 11:05:42: Documento cargado con 1 páginas.
+20-12-2024 11:17:33: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 11:17:35: Documento cargado con 1 páginas.
+20-12-2024 11:17:43: Imprimiendo página 1.
+20-12-2024 11:17:50: Documento enviado a la impresora.
+20-12-2024 12:23:53: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 12:23:53: Documento cargado con 1 páginas.
+20-12-2024 12:23:55: Imprimiendo página 1.
+20-12-2024 12:23:55: Documento enviado a la impresora.
+20-12-2024 12:24:03: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 12:24:03: Documento cargado con 1 páginas.
+20-12-2024 13:14:52: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 13:14:52: Documento cargado con 1 páginas.
+20-12-2024 13:14:55: Imprimiendo página 1.
+20-12-2024 13:14:55: Documento enviado a la impresora.
+20-12-2024 13:56:30: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 13:56:30: Documento cargado con 1 páginas.
+20-12-2024 13:56:33: Imprimiendo página 1.
+20-12-2024 13:56:33: Documento enviado a la impresora.
+20-12-2024 13:58:51: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 13:58:51: Documento cargado con 1 páginas.
+20-12-2024 13:58:53: Imprimiendo página 1.
+20-12-2024 13:58:53: Documento enviado a la impresora.
+20-12-2024 14:07:57: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 14:07:57: Documento cargado con 1 páginas.
+20-12-2024 14:08:00: Imprimiendo página 1.
+20-12-2024 14:08:00: Documento enviado a la impresora.
+20-12-2024 14:16:14: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 14:16:14: Documento cargado con 1 páginas.
+20-12-2024 14:16:17: Imprimiendo página 1.
+20-12-2024 14:16:17: Documento enviado a la impresora.
+20-12-2024 14:23:30: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 14:23:30: Documento cargado con 1 páginas.
+20-12-2024 14:23:33: Imprimiendo página 1.
+20-12-2024 14:23:33: Documento enviado a la impresora.
+20-12-2024 14:40:05: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400016521.pdf
+20-12-2024 14:40:05: Documento cargado con 1 páginas.
+20-12-2024 14:40:07: Imprimiendo página 1.
+20-12-2024 14:40:08: Documento enviado a la impresora.
+20-12-2024 15:25:52: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004778.pdf
+20-12-2024 15:25:52: Documento cargado con 1 páginas.
+20-12-2024 15:25:54: Imprimiendo página 1.
+20-12-2024 15:25:55: Documento enviado a la impresora.
+20-12-2024 15:34:52: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004820.pdf
+20-12-2024 15:34:52: Documento cargado con 1 páginas.
+20-12-2024 15:34:54: Imprimiendo página 1.
+20-12-2024 15:34:54: Documento enviado a la impresora.
+20-12-2024 15:40:48: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004884.pdf
+20-12-2024 15:40:48: Documento cargado con 1 páginas.
+20-12-2024 15:40:50: Imprimiendo página 1.
+20-12-2024 15:40:51: Documento enviado a la impresora.
+20-12-2024 16:07:29: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004897.pdf\n20-12-2024 16:07:29: Documento cargado con 1 páginas.\n20-12-2024 16:07:31: Imprimiendo página 1.\n20-12-2024 16:07:31: Documento enviado a la impresora.\n20-12-2024 16:12:57: Intentando imprimir C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004957.pdf\n20-12-2024 16:12:57: Documento cargado con 1 páginas.\n20-12-2024 16:12:59: Imprimiendo página 1.\n20-12-2024 16:12:59: Documento enviado a la impresora.\n20-12-2024 16:19:03: Intentando imprimir directamente C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004957.pdf\n20-12-2024 16:19:03: Error al imprimir: Could not load file or assembly 'System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'. El sistema no puede encontrar el archivo especificado.\n20-12-2024 16:19:31: Intentando imprimir directamente C:\INSICO\POS_TBK\tbk_pos\Documento_98202400004957.pdf\n

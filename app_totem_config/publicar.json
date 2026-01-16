@@ -1,0 +1,14 @@
+flutter run -d windows 
+--dart-define=DB_IP=200.75.12.92 
+--dart-define=DB_PORT=1433  
+--dart-define=DB_NAME=Puentealto_web_muni  
+--dart-define=DB_USER=insico  
+--dart-define=DB_PASS=insico
+
+
+flutter build windows --release 
+--dart-define=DB_IP=149.76.1.148 
+--dart-define=DB_PORT=50185 
+--dart-define=DB_NAME=Puentealto_web_muni 
+--dart-define=DB_USER=sa 
+--dart-define=DB_PASS=,Sa3Ey%U 

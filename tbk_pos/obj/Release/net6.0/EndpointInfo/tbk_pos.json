@@ -1,0 +1,681 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "tbk_pos",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Deuda/{rut}": {
+      "get": {
+        "tags": [
+          "Deuda"
+        ],
+        "parameters": [
+          {
+            "name": "rut",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Deuda/insert": {
+      "post": {
+        "tags": [
+          "Deuda"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransaccionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransaccionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransaccionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Deuda/update/{folio}": {
+      "put": {
+        "tags": [
+          "Deuda"
+        ],
+        "parameters": [
+          {
+            "name": "folio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransaccionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransaccionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTransaccionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tbk/getPorts": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tbk/poll": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tbk/loadKeys": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tbk/closeDay": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KeyResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tbk/sale": {
+      "post": {
+        "tags": [
+          "Tbk"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VentaRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VentaRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VentaRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VentaResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VentaResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VentaResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tbk/printertoner/{folio}": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "parameters": [
+          {
+            "name": "folio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tbk/movimientos/{fecha}": {
+      "get": {
+        "tags": [
+          "Tbk"
+        ],
+        "parameters": [
+          {
+            "name": "fecha",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "rut",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "folio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Detalle": {
+        "type": "object",
+        "properties": {
+          "teGiroId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "folio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "identificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "paPersonaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rutNumero": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rutDigito": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "monto": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "reajuste": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intereses": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "glosa": {
+            "type": "string",
+            "nullable": true
+          },
+          "boletin": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "pago": {
+            "type": "boolean"
+          },
+          "cCosto": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "KeyResponseDto": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoadKeysResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadKeysResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "responseMessage": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "commerceCode": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "terminalId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "responseMessage": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "commerceCode": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "terminalId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "ticket": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "authorizationCode": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "last4Digits": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "operationNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "cardType": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "accountingDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "accountNumber": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "cardBrand": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "realDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "printingField": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "sharesType": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sharesNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sharesAmount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sharesTypeGloss": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransaccionDto": {
+        "type": "object",
+        "properties": {
+          "monto": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "folio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "detalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Detalle"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTransaccionDto": {
+        "type": "object",
+        "properties": {
+          "codeStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "terminal": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarjeta": {
+            "type": "string",
+            "nullable": true
+          },
+          "cuenta": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          },
+          "autorizacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VentaRequestDto": {
+        "type": "object",
+        "properties": {
+          "monto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "folio": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VentaResponseDto": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/SaleResponse"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

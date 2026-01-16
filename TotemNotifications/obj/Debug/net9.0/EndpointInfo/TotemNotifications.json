@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Totem Notifications API",
+    "description": "Health y WebSocket endpoints para los tótems de llamados.",
+    "version": "v1"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "TotemNotifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "TotemNotifications"
+        ],
+        "summary": "Revisa el estado del servicio",
+        "description": "Devuelve 200 OK con el cuerpo \"ok\" si la app está en ejecución.",
+        "operationId": "Health",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/llamados/estado": {
+      "get": {
+        "tags": [
+          "TotemNotifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

@@ -1,0 +1,89 @@
+// {
+//   "title": "Puente Alto DESA",
+//   "DB_HOST": "149.76.1.148",
+//   "DB_PORT": 50185,
+//   "DB_NAME": "Puentealto_web_muni",
+//   "DB_USER": "sa",
+//   "DB_PASS": "T7E5kWebn6"
+// }
+
+// Para desarrollo
+// flutter run -d windows --dart-define=DB_IP=149.76.1.148 --dart-define=DB_PORT=50185 --dart-define=DB_NAME=Puentealto_web_muni_ocastro --dart-define=DB_USER=sa --dart-define=DB_PASS=,Sa3Ey%U
+
+//flutter run -d windows --dart-define=DB_IP=149.76.1.200 --dart-define=DB_PORT=50185 --dart-define=DB_NAME=VillaAlemana_web_muni_dparra --dart-define=DB_USER=dparra --dart-define=DB_PASS="ym9dzhB)"
+
+// Para publicar
+// flutter build windows --release --dart-define=DB_HOST=149.76.1.148 --dart-define=DB_PORT=50185 --dart-define=DB_NAME=Puentealto_web_muni --dart-define=DB_USER=sa --dart-define=DB_PASS=T7E5kWebn6
+
+
+
+
+// CREATE TABLE dbo.ALCLLAMADOSTOTEM
+// (
+//     id_llamado  INT IDENTITY(1,1) PRIMARY KEY,
+//     fecha       CHAR(8)  NOT NULL,          -- 20250512
+//     hora        CHAR(6)  NOT NULL,          -- 181310
+//     id_atencion INT      NOT NULL,
+//     modulo      INT      NOT NULL
+// );
+
+// CREATE INDEX IX_ALCLLAMADOSTOTEM_Fecha
+//   ON dbo.ALCLLAMADOSTOTEM (fecha);
+// GO
+
+// ALTER DATABASE [VillaAlemana_web_muni_dparra]
+// SET ENABLE_BROKER
+// WITH ROLLBACK IMMEDIATE;
+
+// -- Datos detallados del llamado (nombre completo, etc.)
+// CREATE TABLE dbo.ALCLLAMADOS (
+//   id_atencion     INT          NOT NULL PRIMARY KEY,
+//   NombreCompleto  NVARCHAR(200) NOT NULL
+// );
+
+// -- Municipios
+// CREATE TABLE dbo.TO_Municipalidad (
+//   MunicipalidadId INT IDENTITY(1,1) PRIMARY KEY,
+//   NombreMuni      NVARCHAR(100) NOT NULL
+// );
+
+// -- Perfiles (licencias, aseo, etc.)
+// CREATE TABLE dbo.TO_Perfil (
+//   PerfilId  INT IDENTITY(1,1) PRIMARY KEY,
+//   Codigo    NVARCHAR(10)  NOT NULL,
+//   Nombre    NVARCHAR(50)  NOT NULL
+// );
+
+// -- Tótems asociados a un municipio + perfil
+// CREATE TABLE dbo.TO_Totems (
+//   TotemId         INT IDENTITY(1,1) PRIMARY KEY,
+//   MunicipalidadId INT            NOT NULL
+//     CONSTRAINT FK_Totems_Muni FOREIGN KEY REFERENCES dbo.TO_Municipalidad(MunicipalidadId),
+//   Codigo          NVARCHAR(50)   NOT NULL,
+//   PerfilId        INT            NOT NULL
+//     CONSTRAINT FK_Totems_Perfil FOREIGN KEY REFERENCES dbo.TO_Perfil(PerfilId)
+// );
+
+// -- Configuración JSON de cada tótem
+// CREATE TABLE dbo.TO_TotemConfig (
+//   TotemId    INT          NOT NULL PRIMARY KEY
+//     CONSTRAINT FK_Config_Totem FOREIGN KEY REFERENCES dbo.TO_Totems(TotemId),
+//   ConfigJson NVARCHAR(MAX) NOT NULL,
+//   UpdatedAt  DATETIME      NOT NULL DEFAULT GETDATE()
+// );
+
+// INSERT INTO dbo.TO_Perfil (Codigo, Nombre)
+// VALUES
+//   ('LICENCIAS', 'Licencias de Conducir'),
+//   ('ASEO',      'Derechos de Aseo');
+
+
+
+{
+  "title": "Puente Alto DESA",
+  "DB_HOST": "149.76.1.148",
+  "DB_PORT": 50185,
+  "DB_NAME": "Puentealto_web_muni",
+  "DB_USER": "sa",
+  "DB_PASS": "T7E5kWebn6"
+}

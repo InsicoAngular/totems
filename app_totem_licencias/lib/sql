@@ -1,0 +1,49 @@
+CREATE OR ALTER PROCEDURE dbo.sp_ALC_InsertAtencion_TipoDia
+  @NumRut     VARCHAR(20),
+  @Tipo       VARCHAR(2)   = 'Z',       -- tipo del correlativo (PR para práctico)
+  @Nombres    NVARCHAR(100)= N'',
+  @Apellidos  NVARCHAR(100)= N'',
+  @UsuarioMod NVARCHAR(30) = N'TOTEM',
+  @IPLocal    NVARCHAR(50) = N''
+AS
+BEGIN
+  SET NOCOUNT ON;
+
+  DECLARE @FECHA CHAR(8) = CONVERT(CHAR(8), GETDATE(), 112);
+  DECLARE @HORA  CHAR(6) = REPLACE(CONVERT(CHAR(8), GETDATE(), 108), ':', '');
+  DECLARE @Ticket INT, @Id INT;
+
+  BEGIN TRAN;
+    -- correlativo POR DIA + POR TIPO
+    SELECT @Ticket = ISNULL(MAX(TRY_CAST(L28_CORRELATIVO AS INT)), 0) + 1
+    FROM ALCAtenciones WITH (UPDLOCK, HOLDLOCK)
+    WHERE L28_FECHA = @FECHA AND L28_TIPO = @Tipo;
+
+    INSERT INTO ALCAtenciones(
+      L28_FECHA, L28_TIPO, L28_CORRELATIVO, L28_NUMRUT,
+      L28_HORA, L28_ATENDIDO, L28_ASIGNADO,
+      L28_NOMBRES, L28_APELLIDOS,
+      L28_USUARIO_MOD, L28_FECHA_MOD, L28_HORA_MOD, L28_IPLOCAL
+    ) VALUES (
+      @FECHA, @Tipo, CONVERT(VARCHAR(10), @Ticket), @NumRut,
+      @HORA, 'N', 'N',
+      @Nombres, @Apellidos,
+      @UsuarioMod, @FECHA, @HORA, @IPLocal
+    );
+
+    SET @Id = SCOPE_IDENTITY();
+  COMMIT;
+
+  SELECT Ticket=@Ticket, IdAtencion=@Id, Fecha=@FECHA, Tipo=@Tipo;
+END
+GO
+
+-- para acelerar MAX(...) por día+tipo
+CREATE INDEX IX_ALCAtenciones_FechaTipo
+ON dbo.ALCAtenciones (L28_FECHA, L28_TIPO) INCLUDE (L28_CORRELATIVO);
+
+-- (opcional pero pro) evita duplicados si algo se cuela:
+-- cada correlativo debe ser único por día+tipo
+CREATE UNIQUE INDEX UQ_ALCAtenciones_FechaTipoCorr
+ON dbo.ALCAtenciones (L28_FECHA, L28_TIPO, L28_CORRELATIVO);
+

@@ -1,0 +1,18 @@
+%windir%\system32\inetsrv\appcmd set apppool "WS" /startMode:AlwaysRunning
+%windir%\system32\inetsrv\appcmd set apppool "WS" /recycling.periodicRestart.time:00:00:00
+%windir%\system32\inetsrv\appcmd set apppool "WS" /processModel.idleTimeout:00:00:00
+%windir%\system32\inetsrv\appcmd set apppool "WS" /processModel.pingingEnabled:true
+%windir%\system32\inetsrv\appcmd set apppool "WS" /processModel.pingInterval:00:05:00   :: (en vez de pingPeriod)
+%windir%\system32\inetsrv\appcmd set apppool "WS" /failure.rapidFailProtection:true
+%windir%\system32\inetsrv\appcmd set apppool "WS" /failure.rapidFailProtectionMaxCrashes:50
+%windir%\system32\inetsrv\appcmd set apppool "WS" /queueLength:10000
+%windir%\system32\inetsrv\appcmd set apppool "WS" /processModel.maxProcesses:1
+%windir%\system32\inetsrv\appcmd set apppool "WS" /recycling.periodicRestart.privateMemory:0
+%windir%\system32\inetsrv\appcmd set apppool "WS" /recycling.periodicRestart.memory:0
+%windir%\system32\inetsrv\appcmd set apppool "WS" /processModel.loadUserProfile:true
+
+%windir%\system32\inetsrv\appcmd set app "WS/" /preloadEnabled:true
+%windir%\system32\inetsrv\appcmd set site "WS" /serverAutoStart:true
+
+%windir%\system32\inetsrv\appcmd set app "Api/" /preloadEnabled:true
+%windir%\system32\inetsrv\appcmd set site "Api" /serverAutoStart:true

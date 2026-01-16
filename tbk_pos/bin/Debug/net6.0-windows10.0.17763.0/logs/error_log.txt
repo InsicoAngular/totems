@@ -1,0 +1,7 @@
+20-12-2024 10:39:52: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:40:39: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:41:27: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:48:35: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:49:31: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 11:02:25: Error al imprimir: Unable to find an entry point named 'StartDocPrinter' in DLL 'winspool.Drv'.
+20-12-2024 11:05:36: Error al imprimir: System.Drawing.Common is not supported on this platform.

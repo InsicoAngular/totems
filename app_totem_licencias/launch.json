@@ -1,0 +1,86 @@
+// flutter run -d windows --dart-define=DB_IP=149.76.1.200 --dart-define=DB_PORT=1433 --dart-define=DB_NAME=VillaAlemana_web_muni_dparra --dart-define=DB_USER=dparra --dart-define=DB_PASS="ym9dzhB)" --dart-define=DB_DEFAULT_TIPO=T --dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion\":\"R\",\"duplicado\":\"D\"}" --dart-define=TOTEM_ID=13 --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl --dart-define=DB_PRACTICO=true --dart-define=apiBase=https://api.reservandotuhora.cl --dart-define=DB_MOCK_MANUAL=true
+
+// flutter build windows --release --dart-define=DB_IP=149.76.1.200 --dart-define=DB_PORT=1433 --dart-define=DB_NAME=VillaAlemana_web_muni_dparra --dart-define=DB_USER=dparra --dart-define=DB_PASS="ym9dzhB)" --dart-define=DB_DEFAULT_TIPO=T --dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion\":\"R\",\"duplicado\":\"D\"}" --dart-define=TOTEM_ID=13 --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl --dart-define=DB_PRACTICO=true
+
+
+// SELECT
+//   pa.PAPersonaId,
+//   pa.RutNumero,
+//   pa.RutDigito,
+//   CONCAT(pa.Nombres, ' ', pa.ApellidoPaterno, ' ', pa.ApellidoMaterno) AS nombre,
+//   af.FechaResultado,
+//   ae.ALCParametro_General_Etapa_id,
+//   af.ALCEstado_id,
+//   af.Resultado,
+//   ae.FechaPago
+// FROM PAPersona          pa
+// JOIN ALCMaestro         am ON pa.PAPersonaId = am.PAPersonaId
+// JOIN ALCEstados         ae ON am.id          = ae.ALCMaestro_id
+// JOIN ALCEstados_Flujos  af ON ae.id          = af.ALCEstado_id
+// WHERE pa.RutNumero = 9599947
+//   AND pa.RutDigito = 6
+//   AND ae.FechaPago      IS NOT NULL
+//   AND af.FechaResultado IS NOT NULL
+//   AND YEAR(af.FechaResultado) = YEAR(GETDATE())   -- ← solo este año
+// ORDER BY af.FechaCreacion DESC;
+
+
+flutter build windows --release 
+  --dart-define=DB_IP=149.76.1.200 
+  --dart-define=DB_PORT=1433 
+  --dart-define=DB_NAME=VillaAlemana_web_muni_dparra 
+  --dart-define=DB_USER=dparra 
+  --dart-define=DB_PASS="ym9dzhB)" 
+  --dart-define=DB_DEFAULT_TIPO=P 
+--dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion\":\"R\",\"duplicado\":\"D\"}"
+  --dart-define=TOTEM_ID=13 
+  --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl 
+  --dart-define=apiBase=https://api.reservandotuhora.cl 
+  --dart-define=DB_PRACTICO=true 
+  --dart-define=DB_MOCK_MANUAL=false
+  --dart-define=NO_KIOSK=true
+
+
+
+  flutter run -d windows  --dart-define=DB_IP=149.76.1.148   --dart-define=DB_PORT=50185   --dart-define=DB_NAME=Puentealto_web_muni_ocastro  --dart-define=DB_USER=sa   --dart-define=DB_PASS=,Sa3Ey%U   --dart-define=DB_DEFAULT_TIPO=P --dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion\":\"R\",\"duplicado\":\"D\"}"  --dart-define=TOTEM_ID=1   --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl   --dart-define=apiBase=https://api.reservandotuhora.cl   --dart-define=DB_PRACTICO=false   --dart-define=DB_MOCK_MANUAL=false
+
+  flutter build windows --release  --dart-define=DB_IP=149.76.1.148   --dart-define=DB_PORT=50185   --dart-define=DB_NAME=Puentealto_web_muni_ocastro  --dart-define=DB_USER=sa   --dart-define=DB_PASS=,Sa3Ey%U   --dart-define=DB_DEFAULT_TIPO=P --dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion\":\"R\",\"duplicado\":\"D\"}"  --dart-define=TOTEM_ID=1   --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl   --dart-define=apiBase=https://api.reservandotuhora.cl   --dart-define=DB_PRACTICO=false   --dart-define=DB_MOCK_MANUAL=false
+
+flutter run -d windows 
+  --dart-define=DB_IP=149.76.1.148 
+  --dart-define=DB_PORT=50185 
+  --dart-define=DB_NAME=Puentealto_web_muni_ocastro  
+  --dart-define=DB_USER=sa 
+  --dart-define=DB_PASS=,Sa3Ey%U 
+  --dart-define=DB_DEFAULT_TIPO=P 
+  --dart-define=TRAMITE_MAP="{\"primera licencia\":\"P\",\"renovacion licencia\":\"R\",\"duplicado\":\"D\",\"cambio domicilio\":\"C\",\"examenes practicos\":\"E\",\"examenes practicos c y cr\":\"E\"}" 
+  --dart-define=TOTEM_ID=1 
+  --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl 
+  --dart-define=apiBase=https://api.reservandotuhora.cl 
+  --dart-define=DB_PRACTICO=true 
+  --dart-define=DB_MOCK_MANUAL=false
+  --dart-define=NO_KIOSK=true
+  --dart-define=PRACTICO_CREAR_URL=https://apipuente.reservandotuhora.cl/apipractico/practico-tablet/crear 
+  --dart-define=COMUNA="PUENTE ALTO"
+
+
+  
+flutter build windows --release
+  --dart-define=DB_IP=149.76.1.148
+  --dart-define=DB_PORT=50185 
+  --dart-define=DB_NAME=Puentealto_web_muni
+  --dart-define=DB_USER=sa  
+  --dart-define=DB_PASS=,Sa3Ey%U
+  --dart-define=DB_DEFAULT_TIPO=P 
+  --dart-define=TRAMITE_MAP="{\"Primera Licencia\":\"P\",\"Examenes Practicos\":\"A\",\"Renovacion Licencia\":\"C\",\"Examenes Practicos C Y CR\":\"M\",\"Duplicado\":\"D\",\"Cambio Domicilio\":\"D\"}"
+  --dart-define=TOTEM_ID=1 
+  --dart-define=DB_ENDPOINT=https://apidemo.reservandotuhora.cl 
+  --dart-define=apiBase=https://api.reservandotuhora.cl 
+  --dart-define=DB_PRACTICO=false 
+  --dart-define=DB_MOCK_MANUAL=false 
+  --dart-define=NO_KIOSK=true
+  --dart-define=PRACTICO_CREAR_URL=https://apipuente.reservandotuhora.cl/apipractico/practico-tablet/crear \
+  --dart-define=COMUNA="PUENTE ALTO"
+
+
+

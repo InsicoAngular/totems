@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "Flutter - Windows - TOTEM 3",
+      "type": "dart",
+      "request": "launch",
+
+      // punto de entrada; ajusta si tu main está en otra ruta
+      "program": "lib\\main.dart",
+
+      /*  argumentos adicionales para flutter run
+          (cada --dart-define va en pareja:  "--dart-define", "CLAVE=valor") */
+      "toolArgs": [
+        "-d", "windows",
+
+        "--dart-define", "DB_IP=149.76.1.200",
+        "--dart-define", "DB_PORT=1433",
+        "--dart-define", "DB_NAME=VillaAlemana_web_muni_dparra",
+        "--dart-define", "DB_USER=dparra",
+        "--dart-define", "DB_PASS=ym9dzhB)",
+        "--dart-define", "DB_DEFAULT_TIPO=T",
+
+        "--dart-define",
+        "TRAMITE_MAP={\\\"primera licencia\\\":\\\"P\\\",\\\"renovacion\\\":\\\"R\\\",\\\"duplicado\\\":\\\"D\\\"}",
+
+        "--dart-define", "TOTEM_ID=7"
+      ]
+    }
+  ]
+}

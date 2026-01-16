@@ -1,0 +1,5 @@
+20-12-2024 10:29:20: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:30:13: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:33:17: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:33:35: Error al imprimir: System.Drawing.Common is not supported on this platform.
+20-12-2024 10:35:25: Error al imprimir: System.Drawing.Common is not supported on this platform.

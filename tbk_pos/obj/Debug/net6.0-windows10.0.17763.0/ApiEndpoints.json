@@ -1,0 +1,177 @@
+[
+  {
+    "ContainingType": "tbk_pos.Controllers.DeudaController",
+    "Method": "GetDeuda",
+    "RelativePath": "api/Deuda/{rut}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rut",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.DeudaController",
+    "Method": "InsertTransaccion",
+    "RelativePath": "api/Deuda/insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "tbk_pos.infractructure.dto.TransaccionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.DeudaController",
+    "Method": "UpdateTransaccion",
+    "RelativePath": "api/Deuda/update/{folio}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folio",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateData",
+        "Type": "tbk_pos.infractructure.dto.UpdateTransaccionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "CloseDay",
+    "RelativePath": "api/Tbk/closeDay",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "tbk_pos.infractructure.dto.KeyResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "GetPorts",
+    "RelativePath": "api/Tbk/getPorts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "LoadKeys",
+    "RelativePath": "api/Tbk/loadKeys",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "tbk_pos.infractructure.dto.KeyResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "Poll",
+    "RelativePath": "api/Tbk/poll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "Printertoner",
+    "RelativePath": "api/Tbk/printertoner/:folio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folio",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "tbk_pos.Controllers.TbkController",
+    "Method": "Sale",
+    "RelativePath": "api/Tbk/sale",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "tbk_pos.infractructure.dto.VentaRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "tbk_pos.infractructure.dto.VentaResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
