@@ -20,6 +20,7 @@ class _PracticoOperatorScreenState extends State<PracticoOperatorScreen> {
   // Data/paginación
   bool _loading = false;
   bool _loadingMore = false;
+  bool _printing = false; // guard anti-doble-tap
   bool _hasMore = true;
   int _page = 0;
   final int _pageSize = 50;
@@ -157,161 +158,162 @@ class _PracticoOperatorScreenState extends State<PracticoOperatorScreen> {
   Future<void> _buscar() => _load(reset: true);
 
   // Print
- // Print
-Future<void> _confirmAndPrint(Map<String, dynamic> row) async {
-  final nombre = (row['nombre'] ?? '').toString();
-  final rut = (row['rut'] ?? '').toString();
-  final pend = (row['pendCount'] as int?) ?? 0;
-  final faltaId = (row['menorEtapaPendiente'] as int?) ?? 0;
+  Future<void> _confirmAndPrint(Map<String, dynamic> row) async {
+    if (_printing) return;
+    setState(() => _printing = true);
+    try {
+      final nombre = (row['nombre'] ?? '').toString();
+      final rut = (row['rut'] ?? '').toString();
+      final pend = (row['pendCount'] as int?) ?? 0;
+      final faltaId = (row['menorEtapaPendiente'] as int?) ?? 0;
 
-  if (pend > 0) {
-    await showDialog<void>(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('No apto para imprimir'),
-        content: Text('Falta: ${_etapaName(faltaId)}'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cerrar'),
+      if (pend > 0) {
+        await showDialog<void>(
+          context: context,
+          builder: (_) => AlertDialog(
+            title: const Text('No apto para imprimir'),
+            content: Text('Falta: ${_etapaName(faltaId)}'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Cerrar'),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
-    return;
-  }
+        );
+        return;
+      }
 
-  // 👇 Paso nuevo: elegir tipo de cupo
-  final label = await showDialog<String>(
-    context: context,
-    builder: (_) => SimpleDialog(
-      title: const Text('Seleccione el cupo a utilizar'),
-      children: [
-        SimpleDialogOption(
-          onPressed: () => Navigator.pop(context, 'Examenes Practicos'),
-          child: const Text('Práctico B'),
+      // Elegir tipo de cupo
+      final label = await showDialog<String>(
+        context: context,
+        builder: (_) => SimpleDialog(
+          title: const Text('Seleccione el cupo a utilizar'),
+          children: [
+            SimpleDialogOption(
+              onPressed: () => Navigator.pop(context, 'Examenes Practicos'),
+              child: const Text('Práctico B'),
+            ),
+            SimpleDialogOption(
+              onPressed: () => Navigator.pop(context, 'Examenes Practicos C y CR'),
+              child: const Text('Práctico C y CR'),
+            ),
+          ],
         ),
-        SimpleDialogOption(
-          onPressed: () => Navigator.pop(context, 'Examenes Practicos C y CR'),
-          child: const Text('Práctico C y CR'),
-        ),
-      ],
-    ),
-  );
+      );
 
-  if (label == null) return;
+      if (label == null) return;
 
-  // Verificamos disponibilidad del cupo elegido
-  final cupo = await DatabaseService.instance.checkCupoManualPorLabel(
-    labelTramite: label,
-    requiereApertura: false,
-  );
-  if (!cupo.ok || cupo.cupoId == null) {
-    await showDialog<void>(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('Sin cupos disponibles'),
-        content: Text(cupo.motivo),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Entendido'),
+      // Verificamos disponibilidad del cupo elegido
+      final cupo = await DatabaseService.instance.checkCupoManualPorLabel(
+        labelTramite: label,
+        requiereApertura: false,
+      );
+      if (!cupo.ok || cupo.cupoId == null) {
+        await showDialog<void>(
+          context: context,
+          builder: (_) => AlertDialog(
+            title: const Text('Sin cupos disponibles'),
+            content: Text(cupo.motivo),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Entendido'),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
-    return;
-  }
+        );
+        return;
+      }
 
-  // Confirmación
-  final ok = await showDialog<bool>(
-    context: context,
-    builder: (_) => AlertDialog(
-      title: const Text('¿Desea emitir el ticket?'),
-      content: Text('$nombre\n$rut\n\nCupo seleccionado: $label'),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context, false),
-          child: const Text('Cancelar'),
+      // Confirmación
+      final ok = await showDialog<bool>(
+        context: context,
+        builder: (_) => AlertDialog(
+          title: const Text('¿Desea emitir el ticket?'),
+          content: Text('$nombre\n$rut\n\nCupo seleccionado: $label'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancelar'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Continuar'),
+            ),
+          ],
         ),
-        FilledButton(
-          onPressed: () => Navigator.pop(context, true),
-          child: const Text('Continuar'),
-        ),
-      ],
-    ),
-  );
-  if (ok != true) return;
+      );
+      if (ok != true) return;
 
-  try {
-    // Registrar usando el botón elegido
-    final res = await DatabaseService.instance.registrarManualSmart(
-      rut: rut,
-      tipo: 'T', // mantienes el mismo tipo interno para impresión/prioridad
-      cupoId: cupo.cupoId,
-    );
+      // Registrar usando el botón elegido
+      final res = await DatabaseService.instance.registrarManualSmart(
+        rut: rut,
+        tipo: 'T',
+        cupoId: cupo.cupoId,
+      );
 
-    if (!res.success || (res.ticket ?? 0) <= 0) {
+      if (!res.success || (res.ticket ?? 0) <= 0) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(res.message ?? 'No se pudo emitir')),
+        );
+        return;
+      }
+
+      // Vista previa
+      final printerName = _printerSel ?? PrintConfig.printerNamePractico;
+      final wantPrint = await _showPrintPreviewDialog(
+        nombre: nombre,
+        ticket: res.ticket!,
+        impresora: printerName,
+      );
+
+      if (wantPrint != true) return;
+
+      // POST crear al endpoint
+      final ep = await DatabaseService.instance.crearPracticoTabletWithReason(
+        rutFormateado: rut,
+        labelTramite: label,
+        fechaExamen: DateTime.now(),
+      );
+
+      if (!ep.ok) {
+        if (!mounted) return;
+        final detalle = [
+          if (ep.status > 0) 'HTTP ${ep.status}',
+          if ((ep.message ?? '').isNotEmpty) ep.message,
+          if ((ep.body ?? '').isNotEmpty) 'Body: ${ep.body}',
+        ].whereType<String>().join(' · ');
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('No se pudo insertar en el endpoint. $detalle')),
+        );
+        // return; // descomenta si quieres abortar la impresión cuando falla el POST
+      }
+
+      // Imprimir
+      final p = EscPosRawPrinter(
+        printerName: printerName,
+        codepage: PrintConfig.codepage,
+      );
+      await p.printPracticoTicket(nombre: nombre, ticket: res.ticket!);
+
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(res.message ?? 'No se pudo emitir')),
+        SnackBar(
+          content: Text('Ticket #${res.ticket} emitido en "$printerName"'),
+        ),
       );
-      return;
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error al imprimir: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => _printing = false);
     }
-
-    // Vista previa
-    final printerName = _printerSel ?? PrintConfig.printerNamePractico;
-    final wantPrint = await _showPrintPreviewDialog(
-      nombre: nombre,
-      ticket: res.ticket!,
-      impresora: printerName,
-    );
-
-    if (wantPrint != true) return;
-
-    // ── POST crear al endpoint (JSON exacto)
-final ep = await DatabaseService.instance.crearPracticoTabletWithReason(
-  rutFormateado: rut,
-  labelTramite: label,
-  fechaExamen: DateTime.now(),
-);
-
-if (!ep.ok) {
-  if (!mounted) return;
-  final detalle = [
-    if (ep.status > 0) 'HTTP ${ep.status}',
-    if ((ep.message ?? '').isNotEmpty) ep.message,
-    if ((ep.body ?? '').isNotEmpty) 'Body: ${ep.body}',
-  ].whereType<String>().join(' · ');
-
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text('No se pudo insertar en el endpoint. $detalle')),
-  );
-
-  // Si quieres abortar la impresión si falla el POST:
-  // return;
-}
-
-    // Imprimir
-    final p = EscPosRawPrinter(
-      printerName: printerName,
-      codepage: PrintConfig.codepage,
-    );
-    await p.printPracticoTicket(nombre: nombre, ticket: res.ticket!);
-
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Ticket #${res.ticket} emitido en "$printerName"'),
-      ),
-    );
-  } catch (e) {
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Error al imprimir: $e')),
-    );
   }
-}
 
 
   Future<void> _probarImpresora() async {
@@ -715,7 +717,7 @@ if (!ep.ok) {
                       ),
                       subtitle: Text(rut),
                       trailing: trailing,
-                      onTap: () => _confirmAndPrint(r),
+                      onTap: _printing ? null : () => _confirmAndPrint(r),
                     );
                   },
                 ),

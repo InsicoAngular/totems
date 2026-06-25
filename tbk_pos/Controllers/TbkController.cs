@@ -321,9 +321,9 @@ namespace tbk_pos.Controllers
                 List<dynamic> init_folios = lstdetalle.Select(item => item.Folio).ToList();
 
                 // Recorrer lstdetalle para generar PDFs o cualquier otra lógica necesaria
-                foreach (var item in lstdetalle)
+                foreach (var item in lstdetalle.GroupBy(x => (object)x.Folio).Select(g => g.First()))
                 {
-                    PrintTeso(item);
+                    await PrintTeso(item);
                 }
 
                 // Retornar respuesta exitosa con init_folios
@@ -416,9 +416,9 @@ namespace tbk_pos.Controllers
             // Convertir a lista
             var lstdetalle = datalle.ToList();
 
-            foreach (var item in lstdetalle)
+            foreach (var item in lstdetalle.GroupBy(x => (object)x.Folio).Select(g => g.First()))
             {
-                PrintTeso(item);
+                await PrintTeso(item);
             }
         }
 
@@ -515,7 +515,7 @@ namespace tbk_pos.Controllers
             printer.PrintDocument();
         }
 
-        private async void PrintTeso(dynamic detalle)
+        private async Task PrintTeso(dynamic detalle)
         {
             try
             {
